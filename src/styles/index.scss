@@ -1,7 +1,137 @@
 @font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-@import 'variables';
-@import 'scaffolding';
+html {
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to left, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #000000, #555555, #000000);
+  color: white;
+  height: 100%;
+}
+
+body {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: -6px auto;
+}
+
+.player-headline {
+  display: flex;
+  justify-content: space-between;
+
+  .nick,
+  .score {
+    font-family: '8BIT WONDER', sans-serif;
+    font-size: 24px;
+    padding: 0 24px;
+  }
+}
+
+.player {
+  margin: 6px;
+  width: calc(50% - 12px);
+  height: 650px;
+  background-color: #999999;
+}
+
+.messages {
+  margin: 6px;
+  padding: 12px;
+  width: calc(100% - 12px);
+  background-color: #333333;
+  border: 1px solid #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-text {
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.fade-in-out {
+  animation: fadeInOut 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 1; }
+  50% { opacity: 0.2; }
+  100% { opacity:1; }
+}
+
+.player-container,
+.robot-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.player-container .player-video {
+  min-height: 298px;
+  width: 95%;
+  object-fit: cover;
+  transform: scaleX(-1);
+  display: block;
+}
+
+.robot-container .avatar {
+  width: 95%;
+  display: block;
+}
+
+.robot-container .robot-hand {
+  position: absolute;
+  width: 95%;
+  display: none;
+}
+
+.player-hand-container {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  right: 0;
+}
+
+.player-hand {
+  position: absolute;
+  top: 2px;
+  right: 1px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 42px;
+  line-height: 100px;
+}
+
+.player-hand-zoom {
+  animation: handZoom .5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes handZoom {
+  0% { font-size: 42px; }
+  50% { font-size: 64px; }
+  100% { font-size: 42px; }
+}
+
+.timer-ring-circle {
+  transition: stroke-dashoffset 0.1s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
