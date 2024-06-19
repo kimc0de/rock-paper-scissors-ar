@@ -9,7 +9,7 @@ html {
   font-family: 'Courier New', Courier, monospace;
   background: #0f0c29;
   background: -webkit-linear-gradient(to left, #24243e, #302b63, #0f0c29);
-  background: linear-gradient(to right, #000000, #555555, #000000);
+  background: linear-gradient(to right, #f5f5dc, #f0e68c, #fff8dc);
   color: white;
   height: 100%;
 }
@@ -20,7 +20,7 @@ body {
 
 .container {
   max-width: 1200px;
-  height: 80vh;
+  height: 70vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -43,18 +43,20 @@ body {
   margin: 6px;
   width: calc(50% - 12px);
   height: 650px;
-  background-color: #999999;
+  background-color: rgba(127, 172, 255, 0.8);
+  border-radius: 20px;
 }
 
 .messages {
   margin: 6px;
   padding: 12px;
   width: calc(100% - 12px);
-  background-color: #333333;
+  background-color: #c38edc;
   border: 1px solid #cccccc;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 }
 
 .message-text {

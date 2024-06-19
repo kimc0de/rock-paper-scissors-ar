@@ -26,7 +26,6 @@ for (let finger of Finger.all) {
     PaperGesture.addCurl(finger, FingerCurl.NoCurl, 1.0);
 }
 
-
 /**
  * Scissors
  */
@@ -41,7 +40,6 @@ ScissorsGesture.addCurl(Finger.Ring, FingerCurl.HalfCurl, 0.9);
 // pinky: curled
 ScissorsGesture.addCurl(Finger.Pinky, FingerCurl.FullCurl, 1.0);
 ScissorsGesture.addCurl(Finger.Pinky, FingerCurl.HalfCurl, 0.9);
-
 
 export {
     RockGesture,
